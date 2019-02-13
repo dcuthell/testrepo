@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import logo from './logo.svg';
 import './App.css';
 import { PDFFrame } from 'grailsoft-modules'
+import { Container, Row, Col } from 'reactstrap'
 
 import samplePDF from './sample.pdf'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -25,6 +26,35 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <Container
+          style={{height: '100vh', maxWidth: '100vw', backgroundColor: '#d6c7c7'}}
+        >
+          <Row
+            style={{height: '90%', backgroundColor: '#cdd6c7'}} >
+            <Col
+              style={{height: '90%', backgroundColor: '##c7d2d6'}}
+              >
+              <h1>FUCK</h1>
+            </Col>
+            <Col style={{backgroundColor: '##c7d2d6'}}>
+              <h1>FUCK</h1>
+            </Col>
+            <Col style={{backgroundColor: '##c7d2d6'}}>
+              <h1>FUCK</h1>
+            </Col>
+            <Col style={{backgroundColor: '##c7d2d6'}}>
+              <h1>FUCK</h1>
+            </Col>
+            <Col style={{backgroundColor: '##c7d2d6'}}>
+              <h1>FUCK</h1>
+            </Col>
+          </Row>
+          <Row style={{backgroundColor: '#cdd6c7'}}>
+            <Col style={{backgroundColor: '##c7d2d6'}}>
+              <h1>FUCK</h1>
+            </Col>
+          </Row>
+        </Container>
         <PDFFrame source={samplePDF} title='Sample' />
       </div>
     );
