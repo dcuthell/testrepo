@@ -9,6 +9,22 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.min.css'
 
 class App extends Component {
+  componentDidMount(){
+    let fetchAddress = "https://reqres.in/api/users?page=2";
+    fetch(fetchAddress)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+        },
+        (error) => {
+          if (error) {
+            console.log(error)
+          }
+        }
+      )
+  }
+
   render() {
     return (
       <div className='App'>
