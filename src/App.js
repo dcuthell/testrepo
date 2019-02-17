@@ -9,22 +9,59 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'font-awesome/css/font-awesome.min.css'
 
 class App extends Component {
-  componentDidMount(){
-    let fetchAddress = "https://reqres.in/api/users?page=2";
-    fetch(fetchAddress)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          console.log(result);
-        },
-        (error) => {
-          if (error) {
-            console.log(error)
-          }
-        }
-      )
+  goSup(){
+    fetch('http://www.grailsoft.com/sup.php', {
+      method: "GET",
+      headers: { 'Content-Type': 'application/json' }
+    })
+    .then((res) => {
+      console.log(res)
+      return res.json();
+    })
+    .then(result => {
+        console.log(result)
+      })
+      .catch(error => {
+        console.log(error)
+      }
+    );
   }
 
+  async componentDidMount(){
+    console.log("mount")
+    function reqListener () {
+      console.log(this.responseText);
+    }
+
+    this.goSup();
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", reqListener);
+    oReq.open("GET", "https://api.instagram.com/v1/users/self/media/recent/?access_token=6363559180.e98b264.d1763cf8104c4840ba64d9226c2bc70c&count=6");
+    oReq.setRequestHeader("Access-Control-Allow-Origin", "*");
+    oReq.onreadystatechange = (message) => console.log("Message is: " + message)
+    // oReq.send();
+    console.log('ok')
+    let fetchAddress = "https://www.example.com/file.xml";
+    fetch(fetchAddress, {
+      headers: {
+        "Access-Control-Allow-Origin" : "https://www.example.com",
+        "Access-Control-Request-Method" : "GET"
+      }
+    })
+    .then(res => {
+      console.log(res)
+      return res.json();})
+    .then(
+      (result) => {
+        console.log(result);
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
+  }
+// https://www.reqres.in/api/users?page=2
+// https://api.instagram.com/v1/users/self/media/recent/?access_token=6363559180.e98b264.d1763cf8104c4840ba64d9226c2bc70c&count=6&callback=foo
   render() {
     return (
       <div className='App'>
