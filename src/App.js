@@ -10,16 +10,13 @@ import 'font-awesome/css/font-awesome.min.css'
 
 class App extends Component {
   goSup(){
-    fetch('http://www.grailsoft.com/sup.php', {
-      method: "GET",
-      headers: { 'Content-Type': 'application/json' }
-    })
+    fetch('http://www.grailsoft.com/sup.php')
     .then((res) => {
       // console.log(res)
       return res.json();
     })
     .then(result => {
-        console.log(result)
+        console.log(JSON.parse(result))
       })
       .catch(error => {
         console.log(error)
@@ -41,11 +38,10 @@ class App extends Component {
     oReq.onreadystatechange = (message) => console.log("Message is: " + message)
     // oReq.send();
     console.log('ok')
-    let fetchAddress = "https://www.example.com/file.xml";
+    // let fetchAddress = "https://api.instagram.com/v1/users/self/media/recent/?access_token=6363559180.e98b264.d1763cf8104c4840ba64d9226c2bc70c&count=6";
     // fetch(fetchAddress, {
     //   headers: {
-    //     "Access-Control-Allow-Origin" : "https://www.example.com",
-    //     "Access-Control-Request-Method" : "GET"
+    //     "X-Frame-Options": "SAMEORIGIN"
     //   }
     // })
     // .then(res => {
