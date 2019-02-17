@@ -15,7 +15,7 @@ class App extends Component {
       headers: { 'Content-Type': 'application/json' }
     })
     .then((res) => {
-      console.log(res)
+      // console.log(res)
       return res.json();
     })
     .then(result => {
@@ -42,23 +42,23 @@ class App extends Component {
     // oReq.send();
     console.log('ok')
     let fetchAddress = "https://www.example.com/file.xml";
-    fetch(fetchAddress, {
-      headers: {
-        "Access-Control-Allow-Origin" : "https://www.example.com",
-        "Access-Control-Request-Method" : "GET"
-      }
-    })
-    .then(res => {
-      console.log(res)
-      return res.json();})
-    .then(
-      (result) => {
-        console.log(result);
-      },
-      (error) => {
-        console.log(error)
-      }
-    )
+    // fetch(fetchAddress, {
+    //   headers: {
+    //     "Access-Control-Allow-Origin" : "https://www.example.com",
+    //     "Access-Control-Request-Method" : "GET"
+    //   }
+    // })
+    // .then(res => {
+    //   console.log(res)
+    //   return res.json();})
+    // .then(
+    //   (result) => {
+    //     console.log(result);
+    //   },
+    //   (error) => {
+    //     console.log(error)
+    //   }
+    // )
   }
 // https://www.reqres.in/api/users?page=2
 // https://api.instagram.com/v1/users/self/media/recent/?access_token=6363559180.e98b264.d1763cf8104c4840ba64d9226c2bc70c&count=6&callback=foo
