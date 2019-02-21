@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import
 
 class Thingy extends Component {
   constructor(props) {
@@ -20,20 +21,26 @@ class Thingy extends Component {
         console.log('name')
         arraything = [
           ...arraything,
-          <p>gofuckyouself</p>
+          <NavItem>
+						<NavLink href={something[thing]} target="_blank" rel="noopener noreferrer"><i className="fab fa-" + thing /></NavLink>
+					</NavItem>
         ]
       }
       if (thing === 'age') {
         console.log('age')
         arraything = [
           ...arraything,
-          <p>gofuckyouself</p>
+          <NavItem>
+            <NavLink href={something[thing]} target="_blank" rel="noopener noreferrer"><i className="fab fa-" + thing /></NavLink>
+          </NavItem>
         ]
       }
       if (thing === 'lifestyle') {
         arraything = [
           ...arraything,
-          <p>gofuckyouself</p>
+          <NavItem>
+            <NavLink href={something[thing]} target="_blank" rel="noopener noreferrer"><i className="fab fa-" + thing /></NavLink>
+          </NavItem>
         ]
       }
       this.setState({
