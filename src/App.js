@@ -72,7 +72,7 @@ class App extends Component {
 // https://www.reqres.in/api/users?page=2
 // https://api.instagram.com/v1/users/self/media/recent/?access_token=6363559180.e98b264.d1763cf8104c4840ba64d9226c2bc70c&count=6&callback=foo
   render() {
-    let shit = { name: 'BOBert', age: 69, lifestyle: 'a feckin sweeet one' }
+    let shit = { name: 'BOBert', age: 69, lifestyle: 'a feckin sweeet one', coolstuff: 'coolstufferrs' }
     return (
       <div className='App'>
         <header className='App-header'>
